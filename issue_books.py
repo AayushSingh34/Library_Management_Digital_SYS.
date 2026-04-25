@@ -9,7 +9,12 @@ def issue():
         target_key = matches[0]
         issue_books[target_key] = books.pop(target_key)
         renumber_books()
-        print("Book assigned successfully.\nThank you for using our library.\nHave a nice day.")
+        print("\n|->Book assigned successfully.\n|-> You have 15 days to return this book.\n\nThank you for using our library.\nHave a nice day.\n\n***For fine details read below.***")
+        print(".\n.\n.\n.\n.")
+        print("## 📜 Return & Fine Policy")
+        print("Users are encouraged to return books promptly. Fines are calculated automatically upon return based on the following schedule:\n")
+        print("| Days Kept | Status | Fine Applied |\n| :--- | :--- | :--- |\n| **1 - 15 Days** | On Time | No Fine (₹0) |\n| **16 - 20 Days** | Overdue | ₹10 per overdue day |\n| **21 - 30 Days** | Severely Overdue | ₹20 per overdue day |\n| **31+ Days** | Defaulted | ₹50 per day + Account Suspension |")
+        print("\n> **Note:** Fines are mandatory and must be cleared before the user can issue any new books.")
     else:
         print("Available copies:")
         for i, key in enumerate(matches, start=1):
@@ -24,7 +29,13 @@ def issue():
                 target_key = matches[choice-1]
                 issue_books[target_key] = books.pop(target_key)
                 renumber_books()
-                print("|->Book assigned successfully.\n|-> You have 15 days to return this book.\nThank you for using our library.\nHave a nice day.")
+                print("\n|->Book assigned successfully.\n|-> You have 15 days to return this book.\n\nThank you for using our library.\nHave a nice day.\n\n***For fine details read below.***")
+                print(".\n.\n.\n.\n.")
+                print("## 📜 Return & Fine Policy")
+                print("Users are encouraged to return books promptly. Fines are calculated automatically upon return based on the following schedule:\n")
+                print("| Days Kept | Status | Fine Applied |\n| :--- | :--- | :--- |\n| **1 - 15 Days** | On Time | No Fine (₹0) |\n| **16 - 20 Days** | Overdue | ₹10 per overdue day |\n| **21 - 30 Days** | Severely Overdue | ₹20 per overdue day |\n| **31+ Days** | Defaulted | ₹50 per day + Account Suspension |")
+                print("\n> **Note:** Fines are mandatory and must be cleared before the user can issue any new books.")
                 break
             else:
                 print(f"Invalid choice. Please enter a number between 1 and {len(matches)}.")
+
